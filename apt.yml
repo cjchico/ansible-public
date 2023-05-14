@@ -1,0 +1,9 @@
+- hosts: "*"
+  become: yes
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: apt
+      apt:
+        update_cache: yes
+        upgrade: 'yes'
